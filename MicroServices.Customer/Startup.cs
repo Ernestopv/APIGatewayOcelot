@@ -11,7 +11,6 @@ namespace MicroServices.Customer
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
-    using SharedLibrary.Filters.Filters;
 
     /// <summary>
     /// App startup
@@ -41,7 +40,7 @@ namespace MicroServices.Customer
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;
-                options.Filters.Add<NotFoundExceptionFilter>();
+                //options.Filters.Add<NotFoundExceptionFilter>();
             });
             services.AddSwaggerGen(c =>
             {

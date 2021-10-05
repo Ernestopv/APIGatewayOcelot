@@ -3,7 +3,6 @@
 //     // Copyright (c) The AA(Ireland) Limited. All rights reserved. //
 // </copyright>
 
-using SharedLibrary.Exceptions;
 using System;
 using System.Threading.Tasks;
 
@@ -51,7 +50,7 @@ namespace MicroServices.Customer.Controllers
             var customer = Customers.FirstOrDefault(x => x.Id == id);
             if (customer == null)
             {
-                throw new NotFoundException($"The customer ({id}) does not exist,");
+                throw new Exception($"The customer ({id}) does not exist,");
             }
 
             return Ok(customer);

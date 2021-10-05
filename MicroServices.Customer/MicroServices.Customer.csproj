@@ -17,7 +17,5 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\MicroServices.Model\MicroServices.Model.csproj" />
-		<ProjectReference Include="..\SharedLibrary\SharedLibrary.Exceptions\SharedLibrary.Exceptions.csproj" />
-		<ProjectReference Include="..\SharedLibrary\SharedLibrary.Filters\SharedLibrary.Filters.csproj" />
 	</ItemGroup>
 </Project>

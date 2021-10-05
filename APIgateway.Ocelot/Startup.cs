@@ -6,7 +6,6 @@
 using APIgateway.Ocelot.Aggregators;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-using SharedLibrary.Filters.Filters;
 
 namespace APIgateway.Ocelot
 {
@@ -46,7 +45,7 @@ namespace APIgateway.Ocelot
             services.AddControllers(options =>
             {
                 options.SuppressAsyncSuffixInActionNames = false;
-                options.Filters.Add<NotFoundExceptionFilter>();
+                //options.Filters.Add<NotFoundExceptionFilter>();
             });
             // Adds Swagger documentation for Ocelot
             services.AddSwaggerForOcelot(Configuration, (options) => { options.GenerateDocsForAggregates = true; });

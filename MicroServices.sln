@@ -18,10 +18,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIgateway.Ocelot", "APIgat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServices.Model", "MicroServices.Model\MicroServices.Model.csproj", "{8283A028-0EAB-4812-8B85-D089F362BF4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary.Exceptions", "SharedLibrary\SharedLibrary.Exceptions\SharedLibrary.Exceptions.csproj", "{3C1BBBDA-8243-4DAD-8D00-F751FB6FF58E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary.Filters", "SharedLibrary\SharedLibrary.Filters\SharedLibrary.Filters.csproj", "{63B6C323-D48F-4B5D-BF01-23D1C2BC41CF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,14 +44,6 @@ Global
 		{8283A028-0EAB-4812-8B85-D089F362BF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8283A028-0EAB-4812-8B85-D089F362BF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8283A028-0EAB-4812-8B85-D089F362BF4C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C1BBBDA-8243-4DAD-8D00-F751FB6FF58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C1BBBDA-8243-4DAD-8D00-F751FB6FF58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C1BBBDA-8243-4DAD-8D00-F751FB6FF58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C1BBBDA-8243-4DAD-8D00-F751FB6FF58E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63B6C323-D48F-4B5D-BF01-23D1C2BC41CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63B6C323-D48F-4B5D-BF01-23D1C2BC41CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63B6C323-D48F-4B5D-BF01-23D1C2BC41CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63B6C323-D48F-4B5D-BF01-23D1C2BC41CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
