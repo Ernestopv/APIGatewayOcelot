@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroServices.Coffee</name>
+    </assembly>
+    <members>
+        <member name="T:MicroServices.Coffee.Controllers.CoffeeController">
+            <summary>
+            Coffee controller
+            </summary>
+        </member>
+        <member name="F:MicroServices.Coffee.Controllers.CoffeeController.Coffees">
+            <summary>
+            List of available coffees
+            </summary>
+        </member>
+        <member name="M:MicroServices.Coffee.Controllers.CoffeeController.Get">
+            <summary>
+            Get available coffee
+            </summary>
+            <returns>Available coffee</returns>
+        </member>
+        <member name="T:MicroServices.Coffee.Program">
+            <summary>
+            Program app
+            </summary>
+        </member>
+        <member name="M:MicroServices.Coffee.Program.Main(System.String[])">
+            <summary>
+            Main app
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:MicroServices.Coffee.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            App host builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MicroServices.Coffee.Startup">
+            <summary>
+            startup app 
+            </summary>
+        </member>
+        <member name="M:MicroServices.Coffee.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MicroServices.Coffee.Startup"/> class.
+            </summary>
+            <param name="configuration">App configuration</param>
+        </member>
+        <member name="P:MicroServices.Coffee.Startup.Configuration">
+            <summary>
+            Gets configuration 
+            </summary>
+        </member>
+        <member name="M:MicroServices.Coffee.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">App services</param>
+        </member>
+        <member name="M:MicroServices.Coffee.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">App builder</param>
+            <param name="env">app environment</param>
+        </member>
+    </members>
+</doc>

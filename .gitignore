@@ -1,0 +1,8 @@
+**/.vs
+**/APIgateway.Ocelot/bin/
+**/APIgateway.Ocelot/obj/
+**/MicroServices.Coffee/obj/
+**/MicroServices.Customer/obj/
+**/MicroServices.Model/bin/
+**/MicroServices.Model/obj/
+**/MicroServices.Tea/obj/

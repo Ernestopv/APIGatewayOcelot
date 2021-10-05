@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  microservice.customer:
+    build:
+      context: .
+      dockerfile: Microservices.Customer/Dockerfile
+    ports :
+      - 3001:3001
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    #volumes:
+    # -~/.aspnet/https:https:ro
+
+  microservice.coffee:
+    build:
+      context: .
+      dockerfile: Microservices.Coffee/Dockerfile
+    ports :
+      - 3002:3002
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    #volumes:
+    # -~/.aspnet/https:https:ro
+
+  microservice.tea:
+    build:
+      context: .
+      dockerfile: Microservices.Tea/Dockerfile
+    ports :
+      - 3003:3003
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    #volumes:
+    # -~/.aspnet/https:https:ro
+
+  ocelotservice:
+    build:
+      context: .
+      dockerfile: APIgateway.Ocelot/Dockerfile
+    ports :
+      - 3004:3004
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    #volumes:
+    # -~/.aspnet/https:https:ro

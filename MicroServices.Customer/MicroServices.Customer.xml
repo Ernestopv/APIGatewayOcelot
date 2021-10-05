@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroServices.Customer</name>
+    </assembly>
+    <members>
+        <member name="T:MicroServices.Customer.Controllers.CustomerController">
+            <summary>
+            Customer controller 
+            </summary>
+        </member>
+        <member name="F:MicroServices.Customer.Controllers.CustomerController.Customers">
+            <summary>
+            Available customers 
+            </summary>
+        </member>
+        <member name="M:MicroServices.Customer.Controllers.CustomerController.GetAvailableCustomers">
+            <summary>
+            Get all Customers 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServices.Customer.Controllers.CustomerController.GetCustomerById(System.Int32)">
+            <summary>
+            Get Customer by Id 
+            </summary>
+            <param name="id">Customer Id</param>
+            <returns>Customer available</returns>
+        </member>
+        <member name="T:MicroServices.Customer.Startup">
+            <summary>
+            App startup 
+            </summary>
+        </member>
+        <member name="M:MicroServices.Customer.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MicroServices.Customer.Startup"/> class.
+            </summary>
+            <param name="configuration">App configuration</param>
+        </member>
+        <member name="P:MicroServices.Customer.Startup.Configuration">
+            <summary>
+            Gets Configuration
+            </summary>
+        </member>
+        <member name="M:MicroServices.Customer.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">App services</param>
+        </member>
+        <member name="M:MicroServices.Customer.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">App builder</param>
+            <param name="env">App environment</param>
+        </member>
+    </members>
+</doc>

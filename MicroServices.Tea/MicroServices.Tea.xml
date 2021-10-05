@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroServices.Tea</name>
+    </assembly>
+    <members>
+        <member name="T:MicroServices.Tea.Controllers.TeaController">
+            <summary>
+            Tea controller 
+            </summary>
+        </member>
+        <member name="F:MicroServices.Tea.Controllers.TeaController.Teas">
+            <summary>
+            Get teas 
+            </summary>
+        </member>
+        <member name="M:MicroServices.Tea.Controllers.TeaController.Get">
+            <summary>
+            Get Available Tea
+            </summary>
+            <returns>Available tea</returns>
+        </member>
+        <member name="T:MicroServices.Tea.Program">
+            <summary>
+            App program
+            </summary>
+        </member>
+        <member name="M:MicroServices.Tea.Program.Main(System.String[])">
+            <summary>
+            Main app
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:MicroServices.Tea.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            App Host builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServices.Tea.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MicroServices.Tea.Startup"/> class.
+            </summary>
+            <param name="configuration">App configuration</param>
+        </member>
+        <member name="P:MicroServices.Tea.Startup.Configuration">
+            <summary>
+            Gets Configuration
+            </summary>
+        </member>
+        <member name="M:MicroServices.Tea.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">App services</param>
+        </member>
+        <member name="M:MicroServices.Tea.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">App builder</param>
+            <param name="env">App environment</param>
+        </member>
+    </members>
+</doc>
