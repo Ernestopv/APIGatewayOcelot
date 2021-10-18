@@ -1,0 +1,21 @@
+{
+
+  "Aggregates": [ //====>  Request Aggregation (use of two or more microServices to build a response object)
+    {
+      "RouteKeys": [
+        "customer_service_Key",
+        "coffee_service_key"
+      ],
+      "UpstreamPathTemplate": "/customer-process-Coffee/{id}",
+      "Aggregator": "CustomerProcessCoffeeAggregator"
+    },
+    {
+      "RouteKeys": [
+        "customer_service_Key",
+        "tea_service_key"
+      ],
+      "UpstreamPathTemplate": "/customer-process-Tea/{id}",
+      "Aggregator": "CustomerProcessTeaAggregator"
+    }
+  ]
+}

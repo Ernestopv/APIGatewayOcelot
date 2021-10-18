@@ -10,8 +10,10 @@ namespace APIgateway.Ocelot
 {
     using App.Metrics.AspNetCore;
     using App.Metrics.Formatters.Prometheus;
+    using global::Ocelot.DependencyInjection;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;
+    using MMLib.SwaggerForOcelot.DependencyInjection;
 
     public class Program
     {
@@ -33,7 +35,15 @@ namespace APIgateway.Ocelot
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>().ConfigureAppConfiguration((hostingContext, config) =>
+                    {
+                        config.AddOcelot("OcelotEndpoints", hostingContext.HostingEnvironment)
+                        .AddOcelotWithSwaggerSupport((o) =>
+                        {
+                            o.Folder = "OcelotEndpoints";
+                        }).AddEnvironmentVariables();
+
+                    });
                 }).UseMetricsWebTracking().UseMetrics(options =>
                 {
                     options.EndpointOptions = endpointsOptions =>
@@ -43,22 +53,23 @@ namespace APIgateway.Ocelot
                         endpointsOptions.MetricsEndpointOutputFormatter =
                             new MetricsPrometheusProtobufOutputFormatter();
                     };
-                }).ConfigureAppConfiguration((hostingContext, config) =>
-                {
-                    var builder = new ConfigurationBuilder()
-                        .SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-                    var isDockerEnabled = bool.Parse(builder.Build().GetSection("isDockerEnabled").Value);
-                    if (isDockerEnabled)
-                    {
-                        config.AddJsonFile("ocelot.json")
-                            .AddEnvironmentVariables();
-                    }
-                    else
-                    {
-                        config.AddJsonFile("ocelot.development.json")
-                            .AddEnvironmentVariables();
-                    }
+                    //}).ConfigureAppConfiguration((hostingContext, config) =>
+                    //{
+                    //    var builder = new ConfigurationBuilder()
+                    //        .SetBasePath(Directory.GetCurrentDirectory())
+                    //        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                    //    var isDockerEnabled = bool.Parse(builder.Build().GetSection("isDockerEnabled").Value);
+                    //    if (isDockerEnabled)
+                    //    {
+                    //        config.AddJsonFile("ocelot.json")
+                    //            .AddEnvironmentVariables();
+                    //    }
+                    //    else
+                    //    {
+                    //        config.AddJsonFile("ocelot.development.json")
+                    //            .AddEnvironmentVariables();
+                    //    }
+                    //});
                 });
     }
 }

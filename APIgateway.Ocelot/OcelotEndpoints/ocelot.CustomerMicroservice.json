@@ -1,0 +1,44 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/customer/{id}", //=> endpoint configuration from microService
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/customer/{id}", //===> custom endpoint configuration for APIGateway
+      "UpstreamHttpMethod": [ "Get" ], //endpoint (prefix) can be changed from /api/customer/{id} to  /c/{id}
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true, //===> endpoint can be locked to one request every 20s
+        "Period": "20s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "Key": "customer_service_Key", //======> key  to be used in request aggregation
+      "SwaggerKey": "customerprofiles" //=======> key to be used for swagger documentation
+    },
+
+    // Second endpoint
+    {
+      "DownstreamPathTemplate": "/api/customer",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/customer",
+      "UpstreamHttpMethod": [ "Get" ],
+      
+      "SwaggerKey": "customerprofiles"
+    }
+    
+  ]
+ 
+
+}

@@ -1,0 +1,22 @@
+{
+  "Routes": [
+   
+    {
+      "DownstreamPathTemplate": "/coffee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "UpstreamPathTemplate": "/coffee",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "coffee_service_key",
+      "SwaggerKey": "coffees"
+    }
+
+  ]
+
+
+}

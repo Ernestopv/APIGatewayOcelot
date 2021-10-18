@@ -48,13 +48,13 @@ namespace APIgateway.Ocelot
                 //options.Filters.Add<NotFoundExceptionFilter>();
             });
             // Adds Swagger documentation for Ocelot
-            services.AddSwaggerForOcelot(Configuration, (options) => { options.GenerateDocsForAggregates = true; });
+            services.AddSwaggerForOcelot(Configuration, option => { option.GenerateDocsForAggregates = true; });
 
             services.AddResponseCompression();
             //Ocelot service  add request aggregator classes
             services.AddOcelot()
-                .AddSingletonDefinedAggregator<CustomerProcessCoffeeAggregator>()
-                .AddSingletonDefinedAggregator<CustomerProcessTeaAggregator>();
+               .AddSingletonDefinedAggregator<CustomerProcessCoffeeAggregator>()
+              .AddSingletonDefinedAggregator<CustomerProcessTeaAggregator>();
         }
 
         /// <summary>

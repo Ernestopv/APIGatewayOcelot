@@ -1,0 +1,36 @@
+{
+
+  "SwaggerEndPoints": [ // =====> Swagger documentation from  the 3 microServices
+    {
+      "Key": "customerprofiles",
+      "Config": [
+        {
+          "Name": "Customer API",
+          "Version": "v1",
+          "Url": "http://localhost:3001/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "coffees",
+      "Config": [
+        {
+          "Name": "Coffee API",
+          "Version": "v1",
+          "Url": "http://localhost:3002/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "teas",
+      "Config": [
+        {
+          "Name": "Tea API",
+          "Version": "v1",
+          "Url": "http://localhost:3003/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+  
+}
